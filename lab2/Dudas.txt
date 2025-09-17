@@ -1,0 +1,24 @@
+JOEL:
+	- En alta curso, que hacer si ya existe en el sistema un curso con ese nombre? Debemos ver ese caso? como precondicion pusimos que no puede existir un curso con ese nombre.
+	- En alta curso, el caso de uso dice recién al final que se da de alta el curso, luego de haber ingresado todos los datos. Para eso usamos memoria en casi todo, es correcto hacerlo así? Está bien liberada la memoria al final?
+
+
+LUCIANA: 
+1. Los datatypes van en el Modelo de Dominio, con getters o atributos?
+
+Dudas de Consultar Curso:
+2. Esta bien la op MostrarInfoCompletaCurso y como se usaron los datatypes? Adjunto 2 fotos.
+3. "se mostrara la descripcion y la informacion particular para cada ejercicio". Que es la informacion particular? Incluye las soluciones? Si sí, como se pueden usar datatypes para diferenciar los ejercicios de traduccion y los de completar palabra?
+
+Duda de Inscribirse a Curso:
+4. A la operacion realizarInscripcion(nombreCursoElegido:String) habria que pasarle la fecha de inscripcion? O asumimos que se asigna la fecha de hoy, para crear la instancia de Inscripcion? 
+
+Dudas de Realizar Ejercicio:
+5. Hay que considerar el caso que el usuario no tiene ejercicio para hacer? Hay que usar excepciones?
+En presentarProblema(ej: DataEjercicio): 
+6.1 "el sistema presenta el problema": que hace el sistema? es un void? 
+6.2 El sistema puede recordar "el ejercicio representado por el DataEjercicio ej"? Es decir, recordar la instancia de Ejercicio, porque ejercicio no tiene identificador.
+
+NACHO:
+1.La operacion listarIdiomas(), que es del CU ConsultarIdiomas, se usa en el CU altaUsuario, la debemos agregar al contrato?
+2."el Sistema comunica el error", como se supone que debemos indicar eso? Es como un manejo de excepciones? Yo habia hecho un void que en caso de que este todo ok genere una instancia, pero si hay un error en un parametro debe indicar el error. Entonces no seria un void porque puede retornar una cadena de texto con el error, pero en caso de que no haya un error no retorna nada. Entonces no se como hacerlo
